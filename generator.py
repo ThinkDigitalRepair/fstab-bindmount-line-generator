@@ -25,7 +25,7 @@ def make_line(data_dir: str, home_dir: str, dir_to_link, create_nonexistant_dirs
 
 
 def gen_all_dirs(data_dir):
-    return [dir for dir in listdir(data_dir) if path.isdir("{}/{}".format(data_dir, dir))]
+    return sorted([dir for dir in listdir(data_dir) if path.isdir("{}/{}".format(data_dir, dir))])
 
 
 def print_options():
